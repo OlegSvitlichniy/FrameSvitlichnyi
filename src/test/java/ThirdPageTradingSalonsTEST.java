@@ -22,7 +22,6 @@ public class ThirdPageTradingSalonsTEST  extends BaseTest{
         Thread.sleep(3000);
         String stringCity = String.valueOf(driver.findElement(By.xpath("//*[@id=\"vs1__combobox\"]/div[1]")).getText());
         Assert.assertEquals(stringCity, ConstantStringValues.getTextForAssert_Page_3_TC_);
-
     }
     @Test
     /*ТС.2
