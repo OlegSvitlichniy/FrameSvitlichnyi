@@ -6,6 +6,13 @@ import org.testng.annotations.Test;
 
 public class ThirdPageTradingSalonsTEST  extends BaseTest{
     @Test
+    /*Сторінка Салони
+Місцезнаходження автоматично змінюється на сторінці після зміни в хедері.
+Степи.
+1. Відкрити меню Міста в Хедері.
+2. Обрати будь-яке місто Полтава.
+Експектед: Обране місто в хедері тепер відображається в колонці Моє місце знаходження та є першим в списку карток міст
+*/
     public void thirdPageTradingSalons_test_case_1 () throws InterruptedException {
         thirdPageTradingSalons
                 .openThirdPageTradingSalons()
@@ -18,6 +25,12 @@ public class ThirdPageTradingSalonsTEST  extends BaseTest{
 
     }
     @Test
+    /*ТС.2
+На сторінці знаходиться список з салонами по міста.
+Степи:
+1. Відкрити сторінку з салонами
+2. Проскролити сторінку вниз
+Експктед: Контейнер з містами знаходиться на сторінці*/
     public void  thirdPageTradingSalons_test_case_2() throws InterruptedException {
         thirdPageTradingSalons
                 .openThirdPageTradingSalons()
@@ -26,6 +39,13 @@ public class ThirdPageTradingSalonsTEST  extends BaseTest{
         Assert.assertTrue(elementShop.isDisplayed());
     }
     @Test
+    /*ТС.3
+Користувач може відкрити список магазинів у певному місті
+Степи:
+1. Відкрити сторінку з салонами
+2. Проскролити сторінку вниз
+3. Клікнути на кнопку Київ
+Експектед: Відкрився список магазинів у місті Київ*/
     public void thirdPageTradingSalons_test_case_3(){
         thirdPageTradingSalons
                 .openThirdPageTradingSalons()
@@ -35,6 +55,13 @@ public class ThirdPageTradingSalonsTEST  extends BaseTest{
         Assert.assertTrue(elementShopKiev.isDisplayed());
     }
     @Test
+    /*ТС.4
+Користувач може скористуватись функцією прокласти маршрут до обраного салону.
+Степи:
+1. Відкрити сторінку з салонами
+2. Проскролити сторінку вниз
+3. Клікнути на кнопку Київ
+Експектед: Відкрився список магазинів у місті Київ. Кнопка "Прокласти маршрут" присутня на сторінці*/
     public void thirdPageTradingSalons_test_case_4(){
         thirdPageTradingSalons
                 .openThirdPageTradingSalons()
@@ -45,6 +72,11 @@ public class ThirdPageTradingSalonsTEST  extends BaseTest{
 
     }
     @Test
+    /*TC.5
+Користувач може розгорнути список з робочими годинами на тиждень.
+Степи:
+1. Розгорнути робочі години дроп даун.
+Експектед: Список з робочими годинами відкритий*/
     public void thirdPageTradingSalons_test_case_5(){
         thirdPageTradingSalons
                 .openThirdPageTradingSalons()

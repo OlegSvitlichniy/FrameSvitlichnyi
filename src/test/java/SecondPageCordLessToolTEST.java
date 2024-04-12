@@ -7,6 +7,13 @@ import static constances.ConstantUrls.CordlessScrewdriverPage;
 
 public class SecondPageCordLessToolTEST extends BaseTest {
      @Test
+     /*ТС.1
+-----------
+1,Користувач має змогу перейти на розділ з інструментами
+Степи:
+Клікнути на назву розділу(наприклад Акумуляторні шуруповерти)
+Експектед: Обраний підрозділ відкрився ( для тесту перевірити url, та тайтл)
+*/
      public void secondPageCordLessToll_test_case_1(){
          secondPageCordLessTool
                  .openSecondPageCordLessTool();
@@ -18,6 +25,13 @@ public class SecondPageCordLessToolTEST extends BaseTest {
          Assert.assertEquals(URL_Page2_TC_1,CordlessScrewdriverPage);
      }
     @Test
+    /*ТС.2
+-----------
+2,Користувач може відкрити карточку товару.
+Прекондішн: Користувач залогінен/Користувач не залогінен, Користувач знаходиться на конкретній сторінці з інструментами(наприклад Акумуляторні шуруповерти).
+Степи:
+Клікнути на будь-яку карточку товару.
+Експектед: Карточка товару відкрилась і відповідає назві та ціні*/
     public void secondPageCordLessToll_test_case_2(){
         secondPageCordLessTool
                 .openCordlessScrewdriverPage();
@@ -31,6 +45,11 @@ public class SecondPageCordLessToolTEST extends BaseTest {
         Assert.assertEquals(smallCardName,OnPageCardName);
     }
     @Test
+    /*ТС.3
+-----------
+Кнопка “Кошик” присутня в карточці товару.
+Прекондішн: Користувач не залогінен, Користувач знаходиться на конкретній сторінці з інструментами(наприклад Акумуляторні шуруповерти). Степи: 1. Навести на товар (наприклад назва товару)
+Експектед: Кнопка “Кошик” присутня.*/
     public void secondPageCordLessToll_test_case_3() {
         secondPageCordLessTool
                 .openCordlessScrewdriverPage()
@@ -39,6 +58,14 @@ public class SecondPageCordLessToolTEST extends BaseTest {
         Assert.assertTrue(buttonBuy.isDisplayed());
     }
     @Test
+    /*TC.4
+-----------
+Не залогінений користувач не може додати товар в обране. Прекондішн: Користувач не залогінен, Користувач знаходиться на конкретній сторінці з інструментами(наприклад Акумуляторні шуруповерти).
+Степи:
+1. Навести на товар (наприклад назва товару)
+2. Клікнути на кнопку "Додати до обраного".
+Експектед: Відкрилась форма “Реєстрації
+*/
     public void secondPageCordLessToll_test_case_4() {
         secondPageCordLessTool
                 .openCordlessScrewdriverPage()
@@ -48,6 +75,13 @@ public class SecondPageCordLessToolTEST extends BaseTest {
         Assert.assertTrue(s.isDisplayed(), "Element is not displayed");
         }
       @Test
+      /*ТС.5
+-----------
+Користувач може продовжити покупки.
+Перкондішн: Користувач залогінен/Користувач не залогінен, Користувач вже знайшов та додав в кошик товар, Модальне вікно “Кошик” Відкрите.
+Степи:
+1. Клікнути на лінку “Продовжити покупки”
+Експектед:  Модальне вікно “Кошик” закрито, Користувач на сторінці товарів*/
     public void secondPageCordLessToll_test_case_5(){
           secondPageCordLessTool
                   .openCordlessScrewdriverPage()

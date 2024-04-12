@@ -11,7 +11,7 @@ public class SecondPageCordLessTool extends BasePage {
     public SecondPageCordLessTool openSecondPageCordLessTool(){
         driver.get(ConstantUrls.SecongPage_Cordless_Tool);
         Actions moveMouse = new Actions(driver);
-        moveMouse.moveByOffset(0,0).perform();
+        moveMouse.moveByOffset(1,1).perform();
         return this;
     }
     /*Тест кейс 1*/
